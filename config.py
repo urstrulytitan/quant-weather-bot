@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     min_trade_size: float = 5
     ob_snap_interval_ms: tuple[int, int] = (150, 500)
     ob_history: int = 200
-    heartbeat_ms = {"CALM":500, "COMPETITIVE":300, "ILLUSORY":150, "PREDATORY":300}
+    heartbeat_ms: dict[str, int] = {"CALM":500, "COMPETITIVE":300, "ILLUSORY":150, "PREDATORY":300}
     gks_recovery_window_s: int = 900   # 15 minutes
 
     class Config:
